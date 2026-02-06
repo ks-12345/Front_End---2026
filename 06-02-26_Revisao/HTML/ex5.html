@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05 - JavaScript</title>
+</head>
+<body>
+    
+    <script>
+        let agendaHorarios = [8, 12, 25, 15, -2, 20];
+let contagemValidos = 0;
+
+for (let i = 0; i < agendaHorarios.length; i++) {
+    let horario = agendaHorarios[i];
+
+    if (horario >= 0 && horario <= 23) {
+        console.log("Compromisso agendado para as " + horario + "h");
+        contagemValidos++;
+    } else {
+        console.log("Atenção: O horário " + horario + "h é inválido!");
+    }
+}
+
+console.log("Total de compromissos válidos:", contagemValidos);
+
+    </script>
+</body>
+</html>

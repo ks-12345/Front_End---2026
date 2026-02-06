@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04 - JavaScript</title>
+</head>
+
+<body>
+    <script>
+        let hoje = new Date();
+        let evento = new Date(2026, 2, 20); // 20/03/2026
+
+        let diferencaMs = evento - hoje;
+
+        let msPorDia = 24 * 60 * 60 * 1000;
+        let diferencaDias = diferencaMs / msPorDia;
+
+        let diasFaltando = Math.ceil(diferencaDias);
+
+        console.log("Faltam " + diasFaltando + " dias para o seu compromisso!");
+
+    </script>
+</body>
+
+</html>

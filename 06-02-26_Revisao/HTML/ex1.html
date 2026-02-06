@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execicio 01 - JavaScript</title>
+</head>
+<body>
+    
+    <script>
+        let horario = 12;
+let prio = 1;
+
+
+// Manha = < 11
+// Tarde = >=12 && <= 17
+// Noite = >=18 && <=23
+
+
+// “TAREFA CRÍTICA/URGENTE”
+// “TAREFA IMPORTANTE”
+// “TAREFA NÃO IMPORTANTE”
+// "Horário Inválido"
+
+if ((horario < 11 || horario > 17) && prio > 8) {
+    console.log("TAREFA CRÍTICA/URGENTE");
+}
+else if ((horario < 11 || horario > 17) && prio >= 7 && prio < 9) {
+    console.log("TAREFA IMPORTANTE");
+}
+else if (horario >= 0 && horario <= 23) {
+    console.log("TAREFA NÃO IMPORTANTE");
+}
+else {
+    console.log("Horário Inválido");
+}
+</script>
+
+</body>
+</html>

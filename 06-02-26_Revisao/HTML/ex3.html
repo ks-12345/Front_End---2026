@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03 - JavaScript</title>
+</head>
+
+<body>
+    <script>
+        function limparNomeContato(nome) {
+            let nomeLimpo = nome.trim();          // remove espaços
+            let nomeMaiusculo = nomeLimpo.toUpperCase(); // tudo em maiúsculo
+            return nomeMaiusculo;
+        }
+        let resultado = limparNomeContato("Brenda  Ribeiro   ");
+        console.log(resultado);
+
+    </script>
+</body>
+
+</html>
