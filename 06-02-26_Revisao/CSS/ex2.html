@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cartão</title>
+</head>
+<body>
+
+<div id="dados">
+    <input type="text" id="nome" placeholder="Digite seu nome" oninput="gerar()">
+    <br>
+    <input type="text" id="cargo" placeholder="Digite seu cargo" oninput="gerar()">
+    <br>
+    <input type="color" id="color" oninput="mudarCor()">
+</div>
+
+<div id="cartao">
+    <h2 id="cartaoNome">Seu nome</h2>
+    <p id="cartaoCargo">Seu cargo</p>
+</div>
+
+<style>
+#cartao {
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 18px;
+}
+</style>
+
+<script>
+function gerar() {
+    let nome = document.getElementById("nome").value;
+    let cargo = document.getElementById("cargo").value;
+
+    document.getElementById("cartaoNome").innerText = nome || "Seu nome";
+    document.getElementById("cartaoCargo").innerText = cargo || "Seu cargo";
+}
+
+function mudarCor() {
+    let cor = document.getElementById("color").value;
+    document.getElementById("cartao").style.background = cor;
+}
+</script>
+
+</body>
+</html>
