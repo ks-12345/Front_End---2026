@@ -1,23 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperatura</title>
+  <meta charset="UTF-8">
+  <title>Conversor de Temperatura</title>
 </head>
-<body>
-    <input type="number" name="F" id="temp" placeholder="Digite a Temperatura">
-    <button onclick="calcular()">calcular</button>
-
-<script>
-function calcular(temp) {
-c
-
-    if () {
-
-    }
+<style>
+    body {
+  font-family: Arial;
+  text-align: center;
+  margin-top: 100px;
+  transition: background-color 0.5s;
 }
-</script>
-</body>
 
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+</style>
+<body>
+
+  <h2>Conversor de Temperatura</h2>
+
+  <input type="number" id="celsius" placeholder="Digite em °C">
+  <button onclick="converter()">Converter</button>
+
+  <p id="resultado"></p>
+
+  <script>
+function converter() {
+  let c = document.getElementById("celsius").value;
+  let f = c * 1.8 + 32;
+
+  document.getElementById("resultado").innerText =
+    "Temperatura em Fahrenheit: " + f.toFixed(2) + " °F";
+
+  if (f > 80) {
+    document.body.style.backgroundColor = "coral";
+  } else {
+    document.body.style.backgroundColor = "lightskyblue";
+  }
+}
+
+  </script>
+</body>
 </html>
