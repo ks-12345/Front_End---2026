@@ -8,21 +8,37 @@
 <body>
     
     <script>
+
+        // Lista de horários da agenda (alguns válidos e outros inválidos)
         let agendaHorarios = [8, 12, 25, 15, -2, 20];
-let contagemValidos = 0;
 
-for (let i = 0; i < agendaHorarios.length; i++) {
-    let horario = agendaHorarios[i];
+        // Variável para contar quantos horários são válidos
+        let contagemValidos = 0;
 
-    if (horario >= 0 && horario <= 23) {
-        console.log("Compromisso agendado para as " + horario + "h");
-        contagemValidos++;
-    } else {
-        console.log("Atenção: O horário " + horario + "h é inválido!");
-    }
-}
+        // Percorre todos os elementos do array
+        for (let i = 0; i < agendaHorarios.length; i++) {
 
-console.log("Total de compromissos válidos:", contagemValidos);
+            // Guarda o horário atual do índice
+            let horario = agendaHorarios[i];
+
+            // Verifica se o horário está dentro do intervalo válido (0 até 23)
+            if (horario >= 0 && horario <= 23) {
+
+                // Se for válido, exibe mensagem no console
+                console.log("Compromisso agendado para as " + horario + "h");
+
+                // Incrementa a contagem de horários válidos
+                contagemValidos++;
+
+            } else {
+
+                // Caso o horário seja inválido, exibe mensagem de alerta
+                console.log("Atenção: O horário " + horario + "h é inválido!");
+            }
+        }
+
+        // Exibe no console o total de horários válidos encontrados
+        console.log("Total de compromissos válidos:", contagemValidos);
 
     </script>
 </body>
