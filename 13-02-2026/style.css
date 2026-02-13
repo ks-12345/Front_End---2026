@@ -1,0 +1,33 @@
+body{
+    min-height: 100vh;
+}
+.nome1{
+    height: 600px;
+    width: 800px;
+    background-color: aquamarine;   
+}
+
+.nome2{
+    height: 180px;
+    width: 700px;
+    background-color: burlywood;
+    border: 2px solid black;
+}
+.nome3{
+    height: 180px;
+    width: 700px;
+    background-color: chartreuse;
+    border: 2px solid black;
+}
+.nome4{
+    height: 180px;
+    width: 700px;
+    background-color: cadetblue;
+    border: 2px solid black;
+}
+.nome5{
+    height: 80px;
+    width: 90px;
+    background-color: coral;
+    border: 2px solid black;
+}
