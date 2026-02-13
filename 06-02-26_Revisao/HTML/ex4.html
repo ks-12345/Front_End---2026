@@ -9,16 +9,27 @@
 
 <body>
     <script>
+        // Cria um objeto com a data e hora atuais
         let hoje = new Date();
+
+        // Cria um objeto com a data do evento
+        // Atenção: o mês começa do zero (0 = janeiro, 2 = março)
         let evento = new Date(2026, 2, 20); // 20/03/2026
 
+        // Calcula a diferença entre as duas datas em milissegundos
         let diferencaMs = evento - hoje;
 
+        // Define quantos milissegundos existem em um dia
+        // (24 horas * 60 minutos * 60 segundos * 1000 ms)
         let msPorDia = 24 * 60 * 60 * 1000;
+
+        // Converte a diferença de milissegundos para dias
         let diferencaDias = diferencaMs / msPorDia;
 
+        // Arredonda para cima para mostrar quantos dias faltam
         let diasFaltando = Math.ceil(diferencaDias);
 
+        // Exibe no console a quantidade de dias restantes
         console.log("Faltam " + diasFaltando + " dias para o seu compromisso!");
 
     </script>

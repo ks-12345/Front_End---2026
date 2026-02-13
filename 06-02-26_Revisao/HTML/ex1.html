@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,8 @@
 <body>
     
     <script>
-        let horario = 12;
-let prio = 1;
+        let horario = 15;
+let prio = 8;
 
 
 // Manha = < 11
@@ -23,16 +23,16 @@ let prio = 1;
 // "Horário Inválido"
 
 if ((horario < 11 || horario > 17) && prio > 8) {
-    console.log("TAREFA CRÍTICA/URGENTE");
+    alert("TAREFA CRÍTICA/URGENTE");
 }
 else if ((horario < 11 || horario > 17) && prio >= 7 && prio < 9) {
-    console.log("TAREFA IMPORTANTE");
+    alert("TAREFA IMPORTANTE");
 }
 else if (horario >= 0 && horario <= 23) {
-    console.log("TAREFA NÃO IMPORTANTE");
+    alert("TAREFA NÃO IMPORTANTE");
 }
 else {
-    console.log("Horário Inválido");
+    alert("Horário Inválido");
 }
 </script>
 

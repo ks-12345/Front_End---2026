@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,32 @@
 
 <body>
     <script>
+        // Função que limpa e organiza o nome do contato
         function limparNomeContato(nome) {
-            let nomeLimpo = nome.trim();          // remove espaços
-            let nomeMaiusculo = nomeLimpo.toUpperCase(); // tudo em maiúsculo
-            return nomeMaiusculo;
+
+            // Remove espaços do início e do final da string
+            let nomeLimpo = nome.trim();          
+
+            // Converte todos os caracteres para letras maiúsculas
+            let nomeMaiusculo = nomeLimpo.toUpperCase(); 
+
+            // Divide o nome onde houver um ou mais espaços
+            // (\s+ significa: um ou mais espaços)
+            let nomeEspaco = nomeMaiusculo.split(/\s+/);
+
+            // Junta novamente as partes do nome,
+            // colocando apenas um espaço entre elas
+            let nomecerto = nomeEspaco.join(" ");
+
+            // Retorna o nome já corrigido
+            return nomecerto;
         }
-        let resultado = limparNomeContato("Brenda  Ribeiro   ");
-        console.log(resultado);
+
+        // Chama a função passando um nome com espaços extras
+        let resultado = limparNomeContato("bReNDa RIbEIro");
+
+        // Exibe o resultado final na tela
+        alert(resultado);
 
     </script>
 </body>
