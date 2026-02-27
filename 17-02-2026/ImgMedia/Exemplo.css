@@ -1,0 +1,60 @@
+@media screen and (min-width: 1201px) {
+    img {
+        width: 100vh;
+        height: 100vh;
+    }
+
+    body {
+        background-color: rgb(247, 0, 255);
+    }
+}
+
+/* --------------------------------------------- */
+@media screen and (max-width: 1200px){
+    img {
+        width: 100vh;
+        height: 100vh;
+    }
+
+    body {
+        background-color: rgb(247, 0, 255);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    body {
+        background-color: rgb(255, 123, 0);
+    }
+}
+
+/* --------------------------------------------- */
+@media screen and (max-width: 800px) {
+    img {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    body {
+        background-color: rgb(141, 23, 141);
+    }
+}
+
+
+/* --------------------------------------------- */
+@media screen and (max-width: 600px) {
+    img {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    body {
+        background-color: rgb(89, 0, 255);
+    }
+}
+
+/* --------------------------------------------- */
