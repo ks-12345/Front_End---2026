@@ -1,0 +1,154 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* COR DE FUNDO */
+body{
+    background:#fafafa;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* GRID PRINCIPAL */
+.grid{
+    display:grid;
+    gap:10px;
+    margin:20px;
+}
+
+.grid-template-1{
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 60px 1fr 1fr 60px;
+    grid-template-areas:
+    "logo nav nav"
+    "sidenav content advert"
+    "sidenav content advert"
+    "footer footer footer";
+}
+
+/* ITENS DO GRID */
+.item{
+    background:white;
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.item:nth-child(1){ grid-area:logo; }
+.item:nth-child(2){ grid-area:nav; }
+.item:nth-child(3){ grid-area:content; }
+.item:nth-child(4){ grid-area:sidenav; }
+.item:nth-child(5){ grid-area:advert; }
+.item:nth-child(6){ grid-area:footer; }
+
+/* POST */
+.post{
+    width:400px;
+    background:white;
+    border:1px solid #dbdbdb;
+    margin:20px 0;
+    border-radius:5px;
+}
+
+/* CABEÇALHO DO POST */
+.post-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+}
+
+.user-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.username{
+    font-weight:bold;
+}
+
+/* BOTÃO OPÇÕES */
+.options-btn{
+    background:none;
+    border:none;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* IMAGEM DO POST */
+.post-image img{
+    width:100%;
+    display:block;
+}
+
+/* RODAPÉ DO POST */
+.post-footer{
+    padding:10px;
+}
+
+/* BOTÕES */
+.action-buttons{
+    display:flex;
+    gap:10px;
+    font-size:20px;
+}
+
+.action-buttons button{
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+/* BOTÃO SALVAR NA DIREITA */
+.save{
+    margin-left:auto;
+}
+
+/* TEXTO DO POST */
+.post-content{
+    margin-top:10px;
+}
+
+.likes{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.caption{
+    margin-bottom:5px;
+}
+
+.time{
+    font-size:12px;
+    color:gray;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width:600px){
+
+    .post{
+        width:95%;
+    }
+
+    .grid-template-1{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "logo"
+        "nav"
+    }
+
+}
+
+
+#story  {
+    width: 5vh;
+    height: 5vh;
+    border: 5px solid rgb(75, 181, 0);
+    border-radius: 100%;
+}
