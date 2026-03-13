@@ -1,154 +1,879 @@
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+  body {
+    background: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #262626;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 54px;
+  }
+
+  .logo {
+    font-family: 'Pacifico', 'Billabong', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #262626;
+    letter-spacing: -0.5px;
+  }
+
+  .header-icons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .notif-dot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background: #ff3040;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+  }
+
+  /* STORIES */
+  .stories-bar {
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 12px 0 14px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    display: flex;
+    gap: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .stories-bar::-webkit-scrollbar { display: none; }
+
+  .story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .story-ring {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    padding: 2.5px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+
+  .story-ring.seen {
+    background: #dbdbdb;
+  }
+
+  .story-ring.add-story {
+    background: none;
+    border: 1.5px solid #dbdbdb;
+    position: relative;
+  }
+
+  .story-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2.5px solid #fff;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .add-plus {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 22px;
+    height: 22px;
+    background: #0095f6;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .story-name {
+    font-size: 11px;
+    color: #262626;
+    max-width: 68px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* FEED */
+  .feed {
+    max-width: 470px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
+  /* POST */
+  .post {
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 0;
+  }
+
+  .post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+  }
+
+  .post-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .post-avatar-ring {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+
+  .post-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .post-username {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #262626;
+  }
+
+  .post-location {
+    font-size: 11px;
+    color: #262626;
+    display: block;
+  }
+
+  .more-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 20px;
+    color: #262626;
+    letter-spacing: 1px;
+  }
+
+  /* POST IMAGE */
+  .post-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+
+  /* ACTIONS */
+  .post-actions {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px 4px;
+    gap: 14px;
+  }
+
+  .action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s;
+  }
+
+  .action-btn:active { transform: scale(0.85); }
+
+  .save-btn { margin-left: auto; }
+
+  .post-likes {
+    padding: 0 14px 4px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #262626;
+  }
+
+  .post-caption {
+    padding: 0 14px 4px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #262626;
+  }
+
+  .post-caption strong {
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .caption-hashtag {
+    color: #00376b;
+  }
+
+  .post-comments-link {
+    padding: 0 14px 4px;
+    font-size: 13.5px;
+    color: #8e8e8e;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    display: block;
+  }
+
+  .post-time {
+    padding: 0 14px 10px;
+    font-size: 10px;
+    color: #8e8e8e;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  /* ADD COMMENT */
+  .add-comment {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-top: 1px solid #efefef;
+    gap: 10px;
+  }
+
+  .comment-avatar-small {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    background: #0095f6;
+    flex-shrink: 0;
+  }
+
+  .comment-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 13.5px;
+    color: #262626;
+    background: transparent;
+    font-family: inherit;
+  }
+
+  .comment-input::placeholder { color: #8e8e8e; }
+
+  .post-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #0095f6;
+  }
+
+  /* HEART ANIMATION */
+  @keyframes heartPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+  }
+
+  .liked { animation: heartPop 0.3s ease; }
+
+  /* BOTTOM NAV */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 48px;
+    z-index: 100;
+  }
+
+  .nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .nav-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, #f09433, #bc1888) border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #262626;
+  }
+
+  /* SUGGESTED */
+  .suggested-banner {
+    background: #fafafa;
+    padding: 12px 14px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .suggested-title {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8e8e8e;
+  }
+
+  .see-all {
+    font-size: 12px;
+    font-weight: 600;
+    color: #262626;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #262626;
+  min-height: 100vh;
 }
 
-/* COR DE FUNDO */
-body{
-    background:#fafafa;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 54px;
 }
 
-/* GRID PRINCIPAL */
-.grid{
-    display:grid;
-    gap:10px;
-    margin:20px;
+.logo {
+  font-family: 'Pacifico', 'Billabong', cursive;
+  font-size: 26px;
+  font-weight: 400;
+  color: #262626;
+  letter-spacing: -0.5px;
 }
 
-.grid-template-1{
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 60px 1fr 1fr 60px;
-    grid-template-areas:
-    "logo nav nav"
-    "sidenav content advert"
-    "sidenav content advert"
-    "footer footer footer";
+.header-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 
-/* ITENS DO GRID */
-.item{
-    background:white;
-    border:1px solid #ddd;
-    padding:10px;
-    text-align:center;
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.item:nth-child(1){ grid-area:logo; }
-.item:nth-child(2){ grid-area:nav; }
-.item:nth-child(3){ grid-area:content; }
-.item:nth-child(4){ grid-area:sidenav; }
-.item:nth-child(5){ grid-area:advert; }
-.item:nth-child(6){ grid-area:footer; }
+.notif-dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background: #ff3040;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+}
+
+/* STORIES */
+.stories-bar {
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 12px 16px 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  display: flex;
+  gap: 14px;
+}
+
+.stories-bar::-webkit-scrollbar { display: none; }
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.story-ring {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  padding: 2.5px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.story-ring.seen {
+  background: #dbdbdb;
+}
+
+.story-ring.add-story {
+  background: none;
+  border: 1.5px solid #dbdbdb;
+  position: relative;
+}
+
+/* ✅ STORY AVATAR — círculo perfeito com imagem */
+.story-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  background: #c9c9c9;
+  overflow: hidden;           /* garante que a imagem não vaze */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.story-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* preenche sem distorcer */
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+}
+
+.add-plus {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 22px;
+  height: 22px;
+  background: #0095f6;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.story-name {
+  font-size: 11px;
+  color: #262626;
+  max-width: 68px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ✅ STORY NAME com imagem (caso queira usar img no nome) */
+.story-name img {
+  display: none; /* esconde img acidental dentro do story-name */
+}
+
+/* FEED */
+.feed {
+  max-width: 470px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
 
 /* POST */
-.post{
-    width:400px;
-    background:white;
-    border:1px solid #dbdbdb;
-    margin:20px 0;
-    border-radius:5px;
+.post {
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
 }
 
-/* CABEÇALHO DO POST */
-.post-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px;
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
 }
 
-.user-info{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.username{
-    font-weight:bold;
+.post-avatar-ring {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  flex-shrink: 0;
 }
 
-/* BOTÃO OPÇÕES */
-.options-btn{
-    background:none;
-    border:none;
-    font-size:20px;
-    cursor:pointer;
+/* ✅ POST AVATAR — círculo com imagem correta */
+.post-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  overflow: hidden;           /* corta a imagem no círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #c9c9c9;
 }
 
-/* IMAGEM DO POST */
-.post-image img{
-    width:100%;
-    display:block;
+.post-avatar .usuario {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* sem distorção, preenche o círculo */
+  object-position: center top; /* foca no rosto */
+  border-radius: 50%;
+  display: block;
 }
 
-/* RODAPÉ DO POST */
-.post-footer{
-    padding:10px;
+.post-username {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #262626;
 }
 
-/* BOTÕES */
-.action-buttons{
-    display:flex;
-    gap:10px;
-    font-size:20px;
+.post-location {
+  font-size: 11px;
+  color: #262626;
+  display: block;
 }
 
-.action-buttons button{
-    background:none;
-    border:none;
-    cursor:pointer;
+.more-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 20px;
+  color: #262626;
+  letter-spacing: 1px;
 }
 
-/* BOTÃO SALVAR NA DIREITA */
-.save{
-    margin-left:auto;
+/* ✅ POST IMAGE — cobre toda a área sem distorcer */
+.post-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-/* TEXTO DO POST */
-.post-content{
-    margin-top:10px;
+.post-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;           /* evita vazamento */
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.likes{
-    font-weight:bold;
-    margin-bottom:5px;
+/* ✅ Imagens dentro do placeholder (posts) */
+.post-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* quadrado perfeito */
+  object-position: center;
+  display: block;
 }
 
-.caption{
-    margin-bottom:5px;
+/* ✅ Iframe de vídeo no post */
+.post-image-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
-.time{
-    font-size:12px;
-    color:gray;
+/* ACTIONS */
+.post-actions {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px 4px;
+  gap: 14px;
 }
 
-/* RESPONSIVIDADE */
-@media (max-width:600px){
-
-    .post{
-        width:95%;
-    }
-
-    .grid-template-1{
-        grid-template-columns:1fr;
-        grid-template-areas:
-        "logo"
-        "nav"
-    }
-
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s;
 }
 
+.action-btn:active { transform: scale(0.85); }
 
-#story  {
-    width: 5vh;
-    height: 5vh;
-    border: 5px solid rgb(75, 181, 0);
-    border-radius: 100%;
+.save-btn { margin-left: auto; }
+
+.post-likes {
+  padding: 0 14px 4px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.post-caption {
+  padding: 0 14px 4px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #262626;
+}
+
+.post-caption strong {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.caption-hashtag {
+  color: #00376b;
+}
+
+.post-comments-link {
+  padding: 0 14px 4px;
+  font-size: 13.5px;
+  color: #8e8e8e;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  display: block;
+}
+
+.post-time {
+  padding: 0 14px 10px;
+  font-size: 10px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ADD COMMENT */
+.add-comment {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-top: 1px solid #efefef;
+  gap: 10px;
+}
+
+.comment-avatar-small {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: #7b00f6;
+  flex-shrink: 0;
+}
+
+.comment-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 13.5px;
+  color: #262626;
+  background: transparent;
+  font-family: inherit;
+}
+
+.comment-input::placeholder { color: #8e8e8e; }
+
+.post-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0095f6;
+}
+
+/* HEART ANIMATION */
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.liked { animation: heartPop 0.3s ease; }
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 48px;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(45deg, #f09433, #bc1888) border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #262626;
+}
+
+/* SUGGESTED */
+.suggested-banner {
+  background: #fafafa;
+  padding: 12px 14px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggested-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #8e8e8e;
+}
+
+.see-all {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+  cursor: pointer;
+  background: none;
+  border: none;
 }

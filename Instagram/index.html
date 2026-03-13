@@ -1,153 +1,363 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Instagram_logo_2022.svg.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Instagram</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Instagram Feed</title>
 </head>
-
 <body>
 
-    <div class="nv">
-        <section class="grid grid-template-2">
-            <div class="logo">
-                <img src="Instagram_logo_2022.svg.png" width="50vh">
+<!-- HEADER -->
+<header>
+  <div class="logo">Instagram</div>
+  <div class="header-icons">
+    <!-- Heart icon -->
+    <button class="icon-btn" title="Notificações">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+      <span class="notif-dot"></span>
+    </button>
+    <!-- DM icon -->
+    <button class="icon-btn" title="Mensagens">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </button>
+  </div>
+</header>
 
-                <div class="item">
-                <img id="story" src="Projota em um show.jpg">
-                <img id="story" src="bk.jpg">
-                <img id="story" src="bibe.jpg">
-                <img id="story" src="pericles.jpg">
-                <img id="story" src="metal.jpg">
-                <img id="story" src="orochi.jpg">
-                <img id="story" src="djavan.jpg">
-                <img id="story" src="we.jpg">
-            </div>
-            </div>
-         
-        </section>
+<!-- STORIES -->
+<div class="stories-bar">
+
+  <!-- My Story -->
+  <div class="story">
+    <div class="story-ring add-story" style="position:relative;">
+      <div class="story-avatar" style="background:#7b00f6; border:2px solid #fff;">B</div>
+      <span class="add-plus">+</span>
+    </div>
+    <span class="story-name">Seu story</span>
+  </div>
+
+  <!-- Stories -->
+  <div class="story">
+    <div class="story-ring">
+      <div class="story-avatar">
+        <img src="orochi.jpg" alt="" srcset="">
+      </div>
+    </div>
+    <span class="story-name">Orochi</span>
+  </div>
+  <div class="story">
+    <div class="story-ring">
+      <div class="story-avatar">
+        <img src="metal.jpg" alt="">
+      </div>
+    </div>
+    <span class="story-name">Ferrugem</span>
+  </div>
+  <div class="story">
+    <div class="story-ring seen">
+      <div class="story-avatar">
+        <img src="djavan.jpg" alt="" srcset="">
+    </div>
+    </div>
+    <span class="story-name">djavanoficial</span>
+  </div>
+  <div class="story">
+    <div class="story-ring">
+      <div class="story-avatar">
+        <img src="mari.jpg" alt="" srcset="">
+      </div>
+    </div>
+    <span class="story-name">mari_s</span>
+  </div>
+  <div class="story">
+    <div class="story-ring">
+      <div class="story-avatar">
+        <img src="tornado.jpg" alt="">
+      </div>
+    </div>
+    <span class="story-name">Tony_Tornado10</span>
+  </div>
+  <div class="story">
+    <div class="story-ring seen">
+      <div class="story-avatar">
+        <img src="freud.jpg" alt="">
+      </div>
+    </div>
+    <span class="story-name">Freud_</span>
+  </div>
+  <div class="story">
+    <div class="story-ring">
+      <div class="story-avatar">
+        <img src="ze.jpg" alt="">
+      </div>
+    </div>
+    <span class="story-name">BardoZe_Campinas</span>
+  </div>
+
+</div>
+
+<!-- FEED -->
+<div class="feed">
+
+  <!-- POST 1 -->
+  <div class="post">
+    <div class="post-header">
+      <div class="post-user">
+        <div class="post-avatar-ring">
+
+          <div class="post-avatar">
+            <img src="Projota em um show.jpg" class="usuario">
+        </div>
+        </div>
+        <div>
+          <span class="post-username">Projota</span>
+          <span class="post-location">São Paulo, SP</span>
+        </div>
+      </div>
+      <button class="more-btn">···</button>
     </div>
 
+    <div class="post-image-placeholder"><img src="Projota em um show.jpg" alt="" srcset=""></div>
 
-    <article class="post">
-        <!-- Cabeçalho do Post: Foto e Nome do Usuário -->
-        <header class="post-header">
-            <div class="user-info">
-                <img id="ver"
-                    src="https://yt3.googleusercontent.com/wqwwM5rnWHk2Qa2VqZdd3QByCDvAA2ltlizuaZwDH7pvrVIVHI0fZ0A1sL3Qh4DkqrrPUD5p1g=s900-c-k-c0x00ffffff-no-rj"
-                    alt="Perfil" class="user-avatar" style="border-radius:100%; width: 3vh; height: 3vh;">
-                <span class="username">Projota</span>
-            </div>
-            <button class="options-btn">...</button>
-        </header>
+    <div class="post-actions">
+      <button class="action-btn" id="like1" onclick="toggleLike('like1','likes1')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+      <button class="action-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+      <button class="action-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+      <button class="action-btn save-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+    </div>
 
-        <!-- Conteúdo Visual (Foto ou Vídeo) -->
-        <div class="post-image">
-            <img src="Projota em um show.jpg"
-                alt="Conteúdo do post">
+    <div class="post-likes"><span id="likes1">2.847</span> curtidas</div>
+    <p class="post-caption">
+      <strong>Projota</strong>
+      Foco, força e fé
+      <span class="caption-hashtag">#sp #RAP</span>
+    </p>
+    <button class="post-comments-link">Ver todos os 94 comentários</button>
+    <div class="post-time">há 2 horas</div>
+    <div class="add-comment">
+      <div class="comment-avatar-small">B</div>
+      <input class="comment-input" type="text" placeholder="Adicione um comentário..." />
+      <button class="post-btn">Publicar</button>
+    </div>
+  </div>
+
+  <!-- POST 2 -->
+  <div class="post">
+    <div class="post-header">
+      <div class="post-user">
+        <div class="post-avatar-ring">
+          <div class="post-avatar">
+            <img src="bk.jpg" class="usuario">
+          </div>
         </div>
-
-        <!-- Rodapé: Botões de Ação e Legenda -->
-        <footer class="post-footer">
-            <div class="action-buttons">
-                <button>❤️</button>
-                <button>💬</button>
-                <button>✈️</button>
-                <button class="save">🔖</button>
-            </div>
-
-            <div class="post-content">
-                <p class="likes">Curtido por <strong>1.234 pessoas</strong></p>
-                <p class="caption">
-                    <strong>Projota</strong>
-                    Gratidão a Deus pelo ano que passou e muita fé pelo que está por
-                    vir. Feliz aniversário para mim!
-                </p>
-                <span class="time">Há 2 horas</span>
-            </div>
-        </footer>
-    </article>
-
-    <article class="post">
-        <!-- Cabeçalho do Post: Foto e Nome do Usuário -->
-        <header class="post-header">
-            <div class="user-info">
-                <img id="ver"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtQomty2-jyHgmsk4aREr6wt_3V5qxrl8csQ&s"
-                    alt="Perfil" class="user-avatar" style="border-radius:100%; width: 3vh; height: 3vh;">
-                <span class="username">bkttlapa</span>
-            </div>
-            <button class="options-btn">...</button>
-        </header>
-
-        <!-- Conteúdo Visual (Foto ou Vídeo) -->
-        <div class="post-image">
-            <img src="bk.jpg"
-                alt="Conteúdo do post">
+        <div>
+          <span class="post-username">bkttlapa</span>
+          <span class="post-location">Rio de Janeiro, RJ</span>
         </div>
+      </div>
+      <button class="more-btn">···</button>
+    </div>
 
-        <!-- Rodapé: Botões de Ação e Legenda -->
-        <footer class="post-footer">
-            <div class="action-buttons">
-                <button>❤️</button>
-                <button>💬</button>
-                <button>✈️</button>
-                <button class="save">🔖</button>
-            </div>
+    <div class="post-image-placeholder">
+        <img src="bk.jpg" alt="" srcset="">
+    </div>
 
-            <div class="post-content">
-                <p class="likes">Curtido por <strong>1.234 pessoas</strong></p>
-                <p class="caption">
-                    <strong>bkttlapa</strong>
-                    A vitória é um degrau e não o topo.
-                </p>
-                <span class="time">Há 3 dias atrás</span>
-            </div>
-        </footer>
-    </article>
+    <div class="post-actions">
+      <button class="action-btn" id="like2" onclick="toggleLike('like2','likes2')" style="color:#ed4956">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ed4956" stroke="#ed4956" stroke-width="1.8">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+      <button class="action-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+      <button class="action-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+      <button class="action-btn save-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#262626" stroke="#262626" stroke-width="1.8">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+    </div>
 
+    <div class="post-likes"><span id="likes2">1.203</span> curtidas</div>
+    <p class="post-caption">
+      <strong>bkttlapa</strong>
+      Tive que perder pra lembrar por que eu não perdia
+      <span class="caption-hashtag">#musica <div id="bk"></div></span>
+    </p>
+    <button class="post-comments-link">Ver todos os 47 comentários</button>
+    <div class="post-time">há 5 horas</div>
+    <div class="add-comment">
+      <div class="comment-avatar-small">B</div>
+      <input class="comment-input" type="text" placeholder="Adicione um comentário..." />
+      <button class="post-btn">Publicar</button>
+    </div>
+  </div>
 
-        <article class="post">
-        <!-- Cabeçalho do Post: Foto e Nome do Usuário -->
-        <header class="post-header">
-            <div class="user-info">
-                <img id="ver"
-                    src="download.jpg"
-                    alt="Perfil" class="user-avatar" style="border-radius:100%; width: 3vh; height: 3vh;">
-                <span class="username">hungria_oficial</span>
-            </div>
-            <button class="options-btn">...</button>
-        </header>
+  <!-- SUGGESTED BANNER -->
+  <div class="suggested-banner">
+    <span class="suggested-title">Sugeridos para você</span>
+    <button class="see-all">Ver tudo</button>
+  </div>
 
-        <!-- Conteúdo Visual (Foto ou Vídeo) -->
-        <div class="post-image">
-            <img src="191f27d4ec06a97604242f25f7f98468.jpg"
-                alt="Conteúdo do post">
+  <!-- POST 3 -->
+  <div class="post">
+    <div class="post-header">
+      <div class="post-user">
+        <div class="post-avatar-ring">
+          <div class="post-avatar">
+            <img src="pericles.jpg" class="usuario">
+          </div>
         </div>
+        <div>
+          <span class="post-username">Pericles</span>
+          <span class="post-location">Florianópolis, SC</span>
+        </div>
+      </div>
+      <button class="more-btn">···</button>
+    </div>
 
-        <!-- Rodapé: Botões de Ação e Legenda -->
-        <footer class="post-footer">
-            <div class="action-buttons">
-                <button>❤️</button>
-                <button>💬</button>
-                <button>✈️</button>
-                <button class="save">🔖</button>
-            </div>
+    <div class="post-image-placeholder">
+    <iframe src="videoplayback.mp4" frameborder="0"></iframe>
+    </div>
 
-            <div class="post-content">
-                <p class="likes">Curtido por <strong>1.234 pessoas</strong></p>
-                <p class="caption">
-                    <strong>hungria_oficial</strong>
-                    Não controlo tudo, mas escolho viver leve e ser grato todos os dias🙏🏽❤️
-                </p>
-                <span class="time">Há 5 horas</span>
-            </div>
-        </footer>
-    </article>
+    <div class="post-actions">
+      <button class="action-btn" id="like3" onclick="toggleLike('like3','likes3')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+      <button class="action-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+      <button class="action-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+      <button class="action-btn save-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="post-likes"><span id="likes3">4.511</span> curtidas</div>
+    <p class="post-caption">
+      <strong>mari_s</strong>
+     Desafio uma Palavra uma musica, como @Ferrugem
+      <span class="caption-hashtag">#desafioMusica #Ferrugem #Pericles</span>
+    </p>
+    <button class="post-comments-link">Ver todos os 218 comentários</button>
+    <div class="post-time">há 1 dia</div>
+    <div class="add-comment">
+      <div class="comment-avatar-small">B</div>
+      <input class="comment-input" type="text" placeholder="Adicione um comentário..." />
+      <button class="post-btn">Publicar</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button class="nav-btn" title="Início">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#262626" stroke="none">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </svg>
+  </button>
+  <button class="nav-btn" title="Buscar">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+  </button>
+  <button class="nav-btn" title="Criar">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+    </svg>
+  </button>
+  <button class="nav-btn" title="Reels">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8">
+      <rect x="2" y="2" width="20" height="20" rx="2"/>
+      <circle cx="12" cy="12" r="3"/>
+      <line x1="2" y1="9" x2="22" y2="9"/>
+      <line x1="2" y1="15" x2="22" y2="15"/>
+      <line x1="9" y1="2" x2="9" y2="9"/>
+      <line x1="15" y1="2" x2="15" y2="9"/>
+    </svg>
+  </button>
+  <button class="nav-btn" title="Perfil">
+    <div class="nav-avatar">B</div>
+  </button>
+</nav>
+
+<script>
+  function toggleLike(btnId, countId) {
+    const btn = document.getElementById(btnId);
+    const svg = btn.querySelector('svg');
+    const countEl = document.getElementById(countId);
+    const isLiked = svg.getAttribute('fill') !== 'none';
+    
+    const currentVal = parseInt(countEl.textContent.replace(/\./g, '').replace(',', ''));
+    
+    if (isLiked) {
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', '#262626');
+      countEl.textContent = (currentVal - 1).toLocaleString('pt-BR');
+    } else {
+      svg.setAttribute('fill', '#ed4956');
+      svg.setAttribute('stroke', '#ed4956');
+      btn.classList.add('liked');
+      setTimeout(() => btn.classList.remove('liked'), 300);
+      countEl.textContent = (currentVal + 1).toLocaleString('pt-BR');
+    }
+  }
+
+  // Enable comment posting on Enter
+  document.querySelectorAll('.comment-input').forEach(input => {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim()) {
+        input.value = '';
+      }
+    });
+  });
+
+  document.querySelectorAll('.post-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = btn.previousElementSibling;
+      if (input && input.value.trim()) input.value = '';
+    });
+  });
+</script>
 
 </body>
-
 </html>
