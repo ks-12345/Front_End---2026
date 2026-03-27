@@ -146,95 +146,68 @@ return (
     </div>
 )
 }
-function Placarfutebol({ nomeTimeA, nomeTimeB }) {
+function PlacarFutebol({ nomeTimeA, nomeTimeB }) {
+  // Criamos duas "caixinhas de memória" (States)
   const [golsA, setGolsA] = useState(0);
   const [golsB, setGolsB] = useState(0);
 
-  // ✅ estilo do botão (faltava isso)
-  const botaoEstilo = {
-    padding: "10px",
-    backgroundColor: "#4caf50",
-    color: "#fff",
-    border: "none",
-    borderRadius: "8px",
-    cursor: "pointer",
-    marginTop: "5px",
-  };
-
   return (
-    <div
-      style={{
-        border: "3px solid #2e7d32",
-        borderRadius: "15px",
-        padding: "20px",
-        textAlign: "center",
-        backgroundColor: "#f1f8e9",
-        fontFamily: "Arial, sans-serif",
-        maxWidth: "400px",
-        margin: "20px auto",
-      }}
-    >
-      <h2 style={{ color: "#1b5e20" }}>
-        ⚽ Placar do jogo
-      </h2>
+    <div style={{
+      border: '3px solid #2e7d32',
+      borderRadius: '15px',
+      padding: '20px',
+      textAlign: 'center',
+      backgroundColor: '#f1f8e9',
+      fontFamily: 'Arial, sans-serif',
+      maxWidth: '400px',
+      margin: '20px auto'
+    }}>
+      <h2 style={{ color: '#1b5e20' }}>⚽ Placar do Jogo</h2>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          marginTop: "20px",
-        }}
-      >
-        {/* Time A */}
+      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+
+        {/* Lado do Time A */}
         <div>
           <h3>{nomeTimeA}</h3>
-          <h1 style={{ fontSize: "40px", margin: "10px 0" }}>
-            {golsA}
-          </h1>
-          <button
-            onClick={() => setGolsA((prev) => prev + 1)}
-            style={botaoEstilo}
-          >
-            Gol
+          <h1 style={{ fontSize: '48px', margin: '10px 0' }}>{golsA}</h1>
+          <button onClick={() => setGolsA(golsA + 1)} style={botaoEstilo}>
+            GOL!
           </button>
         </div>
 
-        <h1 style={{ margin: "0 20px" }}>X</h1>
+        <h1 style={{ margin: '0 20px' }}>X</h1>
 
-        {/* Time B */}
+        {/* Lado do Time B */}
         <div>
           <h3>{nomeTimeB}</h3>
-          <h1 style={{ fontSize: "40px", margin: "10px 0" }}>
-            {golsB}
-          </h1>
-          <button
-            onClick={() => setGolsB((prev) => prev + 1)}
-            style={botaoEstilo}
-          >
-            Gol
+          <h1 style={{ fontSize: '48px', margin: '10px 0' }}>{golsB}</h1>
+          <button onClick={() => setGolsB(golsB + 1)} style={botaoEstilo}>
+            GOL!
           </button>
         </div>
+
       </div>
 
-      {/* Botão de reset */}
+      <hr style={{ margin: '20px 0' }} />
+
       <button
-        onClick={() => {
-          setGolsA(0);
-          setGolsB(0);
-        }}
-        style={{
-          marginTop: "20px",
-          padding: "10px",
-          backgroundColor: "#1b5e20",
-          color: "#fff",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-        }}
+        onClick={() => { setGolsA(0); setGolsB(0); }}
+        style={{ backgroundColor: '#f44336', color: 'white', border: 'none', padding: '10px', borderRadius: '5px', cursor: 'pointer' }}
       >
-        🔄 Resetar Placar
+        Reiniciar Partida 🔄
       </button>
     </div>
   );
 }
+
+// Estilo simples para os botões de GOL
+const botaoEstilo = {
+  backgroundColor: '#2e7d32',
+  color: 'white',
+  border: 'none',
+  padding: '10px 20px',
+  borderRadius: '5px',
+  fontSize: '16px',
+  cursor: 'pointer',
+  fontWeight: 'bold'
+};
