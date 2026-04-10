@@ -1,0 +1,42 @@
+@keyframes animar {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, -20px) scale(1.1) rotate(5deg);
+  }
+  50% {
+    transform: translate(-20px, -40px) scale(1.2) rotate(-5deg);
+  }
+  75% {
+    transform: translate(15px, -20px) scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+.elemento {
+animation: animar 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+.botao-pulsando {
+  animation: pulsar 1.5s infinite;
+}
