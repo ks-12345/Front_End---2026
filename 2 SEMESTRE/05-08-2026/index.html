@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <header>
+        <div class="head">
+            <img src="imgs/logo.png" alt="Logo" class="logo">
+            <h1>Dashboard Snickers</h1>
+            <h4>🟢 Online</h4>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Seção de controles -->
+        <section class="controle">
+            <button id="btnAtualizar">Atualizar</button>
+
+            <select name="sensor" id="sensor">
+                <option value="todos">Todos</option>
+                <option value="temperatura">Temperatura</option>
+                <option value="umidade">Umidade</option>
+                <option value="pressao">Pressão</option>
+            </select>
+        </section>
+
+        <!-- Seção onde os cards serão criados pelo JavaScript -->
+        <section class="cards" id="containerSensores">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brenda R. Todos os direitos reservados.</p>
+        <p id="horaAtualizacao">Última atualização: --:--:--</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
