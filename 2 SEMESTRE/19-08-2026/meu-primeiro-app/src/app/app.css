@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    width: 200px;
+    height:210px;
+    justify-content: center;
+
+}
+ .tudo{
+    justify-self: center;
+    padding: 300px;
+    background-color: beige;
+    align-items: center;
+    justify-content: center;
+
+ }
+
+ #car {
+    display:flex;
+    font-size:30px;
+    background-color: rgb(83, 83, 83);
+    text-align: center;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    height: 100px;
+    justify-self: center;
+}
