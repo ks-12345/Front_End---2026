@@ -32,5 +32,15 @@ height: 700px;
 
 /* .menu{} */
 
-/* .app-card {} */
+.pe {
+    display:flex;
+    background-color: rgb(76, 0, 255);
+    margin:1vh;
+    max-width: 650vh;
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    position: static;
+}
 
