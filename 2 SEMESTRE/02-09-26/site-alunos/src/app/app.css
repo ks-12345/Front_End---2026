@@ -1,0 +1,36 @@
+.pe{
+    display:flex;
+    background-color: blue;
+}
+
+html{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+
+}
+
+.tudo{
+display: grid;
+background-color: azure;
+border: 2px solid black;
+width: 900px;
+height: 700px;
+}
+
+.topo{
+    display:flex;
+    background-color: red;
+    margin:1vh;
+    max-width: 650vh;
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    position: static;
+}
+
+/* .menu{} */
+
+/* .app-card {} */
+
