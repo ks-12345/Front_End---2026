@@ -7,17 +7,28 @@
 </head>
 <body>
   <div class="tudo">
+
     <div class="topo">
   <app-header>app-header (Topo)</app-header>
   </div>
+
   <div class="menu">
-  <app-sidebar >app-hero-banner</app-sidebar>
+  <app-sidebar></app-sidebar>
   </div>
-  <app-product class="pcs">
-  <app-card >Card 1</app-card>
-  <app-card>Card 2</app-card>
-  <app-card>Card 3</app-card>
-</app-product>
+
+  <div class="banner">
+    <app-hero-banner></app-hero-banner>
+  </div>
+
+<div class="cards">
+  <app-product>
+    <div class="pcs">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+  </app-product>
+</div>
 
 <app-footer class="pe">App-footer</app-footer>
 </div>
